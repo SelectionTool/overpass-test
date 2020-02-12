@@ -15,7 +15,7 @@ describe("", () => {
     })
     expect(bool).toBe(true);
   })
-  it ("check if get_duration returns a number and if that number has a decimal that it is rounded to the nearest hundredth.", () => {
+  it ("check if get_duration(time_out, time_in) returns a number and if that number has a decimal, make sure that it is rounded to the nearest hundredth.", () => {
     expect(inst.get_duration(json[0].out, json[0].in)).toMatch(/^[0-9]{0,2}(\.[0-9]{2}|)/);
   })
   it ("check if get_price(duration) returns FREE when duration is less than 1 hour.", () => {
