@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node server"
+    "start": "node server",
+    "test": "node node_modules/jasmine/bin/jasmine"
   },
   "dependencies": {
-    "express": "4.14.0",
-    "express-session": "1.14.2",
     "body-parser": "1.15.2",
-    "cookie-parser": "1.4.3"
+    "cookie-parser": "1.4.3",
+    "express": "4.14.0",
+    "express-session": "1.14.2"
   },
   "devDependencies": {
     "livereload": "^0.6.2"

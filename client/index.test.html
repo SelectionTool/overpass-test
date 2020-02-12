@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Parking Garage</title>
+
+		<!-- external CSS link -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-3.5.0/jasmine_favicon.png">
+        <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-3.5.0/jasmine.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div id="header">
+			<h1>
+				Transaction History
+			</h1>
+		</div>
+		<div id="content">
+			<table>
+				<thead>
+				<tr>
+					<th>LICENSE</th>
+					<th>PRICE</th>
+					<th>DURATION</th>
+					<th>IN</th>
+					<th>OUT</th>
+				</tr>
+				</thead>
+				<tbody>
+				
+				</tbody>
+			</table>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+        <script src="js/ready.js"></script>
+        <script src="js/app.js"></script>
+        
+        <script type="text/javascript" src="jasmine/lib/jasmine-3.5.0/jasmine.js"></script>
+        <script type="text/javascript" src="jasmine/lib/jasmine-3.5.0/jasmine-html.js"></script>
+        <script type="text/javascript" src="jasmine/lib/jasmine-3.5.0/boot.js"></script>
+        <script type="text/javascript" src="js/app.spec.js"></script>
+
+        <script>
+            domIsReady(function() {
+                //var parent = document.createElement("div");
+                //var p = document.createElement("p");
+                setTimeout(() => {
+                    var jasmine = document.getElementsByClassName("jasmine_html-reporter");
+                    jasmine[0].parentElement.prepend(jasmine[0]);
+                    jasmine[0].style.display = "block";
+                }, 500);
+                //console.log(jasmine);
+                //parent.append(p);
+                //parent.prepend(span);
+
+                //console.log(parent.childNodes); // NodeList [ <span>, <p> ]
+                var inst = new transactions();
+                inst.init();
+            }.bind(this));
+        </script>
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js"></' + 'script>')</script>
+	</body>
+</html>
